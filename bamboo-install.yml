@@ -1,0 +1,14 @@
+- hosts: bamboo
+  strategy: debug
+  gather_facts: yes
+  become: yes
+  ignore_errors: '{{ ansible_check_mode }}'
+  roles:
+    - role: yum-updates
+    - role: linux-core-internal
+      vars:
+        fw_rule: bamboo   
+    - role: bamboo-install
+    - role: bamboo-configure
+      vars:
+        set_permissions: "yes"
