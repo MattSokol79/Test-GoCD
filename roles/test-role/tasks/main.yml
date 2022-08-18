@@ -1,0 +1,13 @@
+---
+
+  #- name: bamboo-install | main | Firewall entry point
+  #  import_tasks: firewall.yml
+
+  #- name: bamboo-install | main | Packages entry point
+  #  import_tasks: packages.yml
+
+  - name: bamboo-install | main | Bamboo Installation entry point
+    import_tasks: install-bamboo.yml
+   
+  #- name: bamboo-install | main | Reboot Bamboo
+  #  import_tasks: restart.yml   

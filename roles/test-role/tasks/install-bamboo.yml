@@ -1,0 +1,3 @@
+---
+
+  - debug: var=vault_ansible_secrets

@@ -1,0 +1,31 @@
+---
+
+# Bamboo software and binary server configuration
+binary_base_uri:                        "http://10.105.139.36:9000"
+binary_bamboo_base:                     "{{ binary_base_uri }}/bamboo"
+bamboo_installer_source_uri:            "https://www.atlassian.com/software/bamboo/downloads/binary/{{ bamboo_bin_file }}"
+bamboo_installer_nexus_uri:             "{{ binary_bamboo_base }}/{{ bamboo_bin_file }}"
+
+# Default user principles
+bamboo_user:                            bamboo
+bamboo_group:                           bamboo
+
+# bamboo data configuration
+bamboo_datadir:                         /mnt/data/bamboo
+bamboo_install_target:                  "{{ bamboo_installto }}/atlassian-bamboo-{{ bamboo_version }}"
+bamboo_installto:                       /opt
+bamboo_server_port:                     8085
+
+#Server config
+bamboo_http_port:                       8085
+bamboo_remote_agent_port:               54663
+bamboo_context_path:                    bamboo
+bamboo_installer_root:                  /bamboo_installer
+bamboo_app_install_root:                /opt/atlassian/bamboo
+bamboo_app_home_root:                   /mnt/data/bamboo/bamboo-home
+
+
+
+
+
+
